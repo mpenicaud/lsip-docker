@@ -7,6 +7,7 @@ RUN mkdir /var/data/LSIP/db/
 RUN chmod 777 -R /var/
 RUN chmod 644 /etc/mysql/my.cnf
 ADD ./files/LSIP_schema.sql ./files/init_db ./files/start_services /var/data/LSIP/
+RUN chmod 755 -R /var/data/LSIP/
 
 RUN /var/data/LSIP/init_db
 #EXPOSE 3306
